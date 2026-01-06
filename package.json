@@ -8,10 +8,10 @@
     "tweakcc": "./dist/index.mjs"
   },
   "scripts": {
-    "build": "tsc --noEmit && tsdown --minify src/index.tsx",
-    "build:dev": "tsdown src/index.tsx",
+    "build": "node init && tsc --noEmit && tsdown --minify src/index.tsx",
+    "build:dev": "node init && tsdown src/index.tsx",
     "watch": "tsdown --watch src/index.tsx",
-    "start": "node dist/index.mjs",
+    "start": "node init && node dist/index.mjs",
     "lint": "tsc --noEmit && eslint src",
     "test": "vitest run",
     "test:dev": "vitest",
@@ -74,7 +74,7 @@
     "ink": "^6.1.0",
     "ink-image": "^2.0.0",
     "ink-link": "^4.1.0",
-    "node-lief": "^0.1.7",
+    "node-lief": "^0.1.8",
     "ollama": "^0.6.0",
     "openai": "^6.3.0",
     "react": "^19.1.1",
